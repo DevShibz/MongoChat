@@ -1,0 +1,130 @@
+export const initialChats = [
+  {
+    id: '1',
+    name: 'Sarah Connor',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
+    lastMessage: 'Hey! Are we still meeting for coffee tomorrow?',
+    time: '10:42 AM',
+    unread: 2,
+    online: true,
+    messages: [
+      { id: 'm1', text: 'Hey there! How have you been?', sender: 'them', time: '10:30 AM' },
+      { id: 'm2', text: 'Doing great! Just finishing up some code.', sender: 'me', time: '10:35 AM' },
+      { id: 'm3', text: 'Hey! Are we still meeting for coffee tomorrow?', sender: 'them', time: '10:42 AM' },
+    ],
+  },
+  {
+    id: '2',
+    name: 'Alex Rivera',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
+    lastMessage: 'The new design mockup looks awesome! 🔥',
+    time: 'Yesterday',
+    unread: 0,
+    online: false,
+    messages: [
+      { id: 'm1', text: 'Check out the new dashboard screenshot I sent', sender: 'them', time: 'Yesterday' },
+      { id: 'm2', text: 'The new design mockup looks awesome! 🔥', sender: 'them', time: 'Yesterday' },
+    ],
+  },
+  {
+    id: '3',
+    name: 'Emily Watson',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
+    lastMessage: 'Can you send the API documentation?',
+    time: 'Monday',
+    unread: 0,
+    online: true,
+    messages: [
+      { id: 'm1', text: 'Hi, working on the mobile app integration now.', sender: 'them', time: 'Monday' },
+      { id: 'm2', text: 'Can you send the API documentation?', sender: 'them', time: 'Monday' },
+    ],
+  },
+  {
+    id: '4',
+    name: 'David Kim',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150',
+    lastMessage: 'Sounds good. Let me test it.',
+    time: 'Nov 12',
+    unread: 0,
+    online: false,
+    messages: [
+      { id: 'm1', text: 'Updated the auth middleware with JWT tokens.', sender: 'me', time: 'Nov 12' },
+      { id: 'm2', text: 'Sounds good. Let me test it.', sender: 'them', time: 'Nov 12' },
+    ],
+  },
+];
+
+export const initialGroups = [
+  {
+    id: 'g1',
+    name: '🚀 Dev Team Core',
+    avatar: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150',
+    description: 'Frontend & backend discussions and sprint updates',
+    membersCount: 8,
+    lastMessage: 'Alex: Pushed the latest commit to main branch',
+    time: '11:15 AM',
+    unread: 3,
+    messages: [
+      { id: 'gm1', text: 'Welcome everyone to the sprint chat!', sender: 'them', senderName: 'Sarah', time: '9:00 AM' },
+      { id: 'gm2', text: 'Node + MongoDB auth is fully functional now.', sender: 'me', senderName: 'You', time: '10:00 AM' },
+      { id: 'gm3', text: 'Pushed the latest commit to main branch', sender: 'them', senderName: 'Alex', time: '11:15 AM' },
+    ],
+  },
+  {
+    id: 'g2',
+    name: '🎨 UI/UX Explorers',
+    avatar: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=150',
+    description: 'Design systems, mobile responsiveness, and prototypes',
+    membersCount: 14,
+    lastMessage: 'Emily: New mobile bottom navigation concept shared',
+    time: 'Yesterday',
+    unread: 0,
+    messages: [
+      { id: 'gm1', text: 'Check Figma for mobile wireframes', sender: 'them', senderName: 'David', time: 'Yesterday' },
+      { id: 'gm2', text: 'New mobile bottom navigation concept shared', sender: 'them', senderName: 'Emily', time: 'Yesterday' },
+    ],
+  },
+  {
+    id: 'g3',
+    name: '☕ Weekend Hangouts',
+    avatar: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=150',
+    description: 'Casual chats, meetups, and weekend plans',
+    membersCount: 6,
+    lastMessage: 'Sarah: Who is up for brunch this Sunday?',
+    time: 'Nov 14',
+    unread: 0,
+    messages: [
+      { id: 'gm1', text: 'Who is up for brunch this Sunday?', sender: 'them', senderName: 'Sarah', time: 'Nov 14' },
+    ],
+  },
+];
+
+export const initialStatuses = [
+  {
+    id: 's1',
+    user: 'Sarah Connor',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
+    time: '12 minutes ago',
+    caption: 'Hiking through the trails today! 🌲⛰️',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600',
+    viewed: false,
+  },
+  {
+    id: 's2',
+    user: 'Alex Rivera',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
+    time: '45 minutes ago',
+    caption: 'Late night coding session ☕💻',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600',
+    viewed: false,
+  },
+  {
+    id: 's3',
+    user: 'Emily Watson',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
+    time: '3 hours ago',
+    caption: 'Coffee and books morning ☕📖',
+    image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600',
+    viewed: true,
+  },
+];
