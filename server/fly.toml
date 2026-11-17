@@ -1,0 +1,34 @@
+app = "mongochat-api"
+primary_region = "sin"   # Singapore — closest free region to India
+
+[build]
+
+[env]
+  PORT       = "5000"
+  NODE_ENV   = "production"
+  DB_NAME    = "chatapp"
+  JWT_EXPIRES_IN = "7d"
+  # CLIENT_ORIGIN is set after Netlify deploy, e.g.:
+  # fly secrets set CLIENT_ORIGIN=https://mongochat.netlify.app
+
+# Secrets — never put real values here, set them once via CLI:
+#   fly secrets set MONGODB_URI="mongodb+srv://..."
+#   fly secrets set JWT_SECRET="..."
+#   fly secrets set CLIENT_ORIGIN="https://your-app.netlify.app"
+
+[http_service]
+  internal_port       = 5000
+  force_https         = true
+  auto_stop_machines  = false   # keep alive — no cold starts for Socket.IO
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [http_service.concurrency]
+    type       = "connections"
+    hard_limit = 100
+    soft_limit = 80
+
+[[vm]]
+  memory   = "256mb"
+  cpu_kind = "shared"
+  cpus     = 1
