@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL ?? '';
+const API_BASE = 'https://mongochat.fly.dev';
 
 // Small fetch wrapper for the REST API. Throws Error(message) on failure.
 export async function api(path, { token, method = 'GET', body } = {}) {
