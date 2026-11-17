@@ -1,4 +1,4 @@
-app = "mongochat-api"
+app = "mongochat"
 primary_region = "sin"   # Singapore — closest free region to India
 
 [build]
