@@ -8,7 +8,7 @@ const registerChatHandlers = require('./handlers/chatHandlers');
 // (groups, status, ...) as another register*Handlers module below.
 function initSocket(httpServer) {
   const io = new Server(httpServer, {
-    cors: { origin: process.env.CLIENT_ORIGIN || 'https://mongchat.netlify.app' },
+    cors: { origin: 'https://mongchat.netlify.app' },
   });
 
   io.use(socketAuth);
