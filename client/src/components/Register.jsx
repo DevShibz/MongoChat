@@ -58,7 +58,7 @@ export default function Register({ onRegisterSuccess, switchToLogin }) {
     setSuccessMsg('');
 
     try {
-      const response = await fetch('/api/auth/register', {
+      const response = await fetch('https://mongochat.fly.dev/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

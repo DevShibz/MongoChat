@@ -26,7 +26,7 @@ export default function App() {
         const storedUser = localStorage.getItem('chatapp_user');
         if (!storedToken || !storedUser) return;
 
-        const res = await fetch('/api/auth/me', {
+        const res = await fetch('https://mongochat.fly.dev/api/auth/me', {
           headers: { Authorization: `Bearer ${storedToken}` },
         });
         if (res.status === 401) {

@@ -15,7 +15,7 @@ export default function Dashboard({ user, token, onLogout }) {
     setTestingToken(true);
     setTokenStatus(null);
     try {
-      const res = await fetch('/api/auth/me', {
+      const res = await fetch('https://mongochat.fly.dev/api/auth/me', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
