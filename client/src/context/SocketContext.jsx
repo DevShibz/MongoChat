@@ -11,7 +11,7 @@ export function SocketProvider({ token, children }) {
 
   useEffect(() => {
     if (!token) return undefined;
-    const s = io({ auth: { token } });
+    const s = io(import.meta.env.VITE_API_URL ?? undefined, { auth: { token } });
     const onConnect = () => setConnected(true);
     const onDisconnect = () => setConnected(false);
     const onError = (err) => {

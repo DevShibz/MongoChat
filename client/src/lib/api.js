@@ -1,10 +1,12 @@
+const API_BASE = import.meta.env.VITE_API_URL ?? '';
+
 // Small fetch wrapper for the REST API. Throws Error(message) on failure.
 export async function api(path, { token, method = 'GET', body } = {}) {
   const headers = {};
   if (token) headers.Authorization = `Bearer ${token}`;
   if (body !== undefined) headers['Content-Type'] = 'application/json';
 
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API_BASE}/api${path}`, {
     method,
     headers,
     body: body !== undefined ? JSON.stringify(body) : undefined,
